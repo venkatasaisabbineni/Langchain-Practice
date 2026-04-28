@@ -24,3 +24,7 @@ __pycache__/
 .AppleDouble
 .LSOverride
 Icon
+
+
+# ----- UnWanted Files -----
+introduction-langchain/
