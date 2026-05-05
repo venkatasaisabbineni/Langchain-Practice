@@ -9,9 +9,11 @@ ENV/
 *.log
 local_cache/
 vector_stores/
+vectorstore/
 .langchain/
 # Ignore SQLite databases if using them for local vector storage
 *.db
+Data/
 
 # --- Python ---
 __pycache__/
