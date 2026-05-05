@@ -1,7 +1,7 @@
 """RAG chatbot using local Ollama (gemma3:12b) and ChromaDB."""
 
 from __future__ import annotations
-
+from datetime import datetime
 from pathlib import Path
 
 from langchain_classic.chains import create_retrieval_chain
@@ -83,7 +83,7 @@ def build_chain(persist_directory: Path):
 
 def main() -> None:
     chain = build_chain(DEFAULT_DB_DIR)
-    session_id = "default"
+    session_id = str(datetime.now().strftime("%d-%m-%Y-%H-%M"))
 
     print(f"\nChatbot ready (model: {OLLAMA_MODEL}). Type 'quit' or 'exit' to stop.\n")
 
